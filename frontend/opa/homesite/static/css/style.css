@@ -1,0 +1,404 @@
+body {
+    background: #fff;
+    margin: 0 auto; 
+}
+
+/*------------------------------------*\
+    $TOP BAR
+\*------------------------------------*/
+
+.nav {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 57px;
+    z-index: 0;
+}
+
+.menu {
+    position: fixed;
+    z-index: 20;
+    background: #000;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .menu a {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: #333;
+        transition: all 0.2s;
+    }
+    
+    .logoside {
+    margin-left: 46%;
+    margin-right: auto;
+    padding-bottom: 20px;
+    background-image: url("http://i.imgur.com/JQxcgpe.png");
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat; 
+    -webkit-filter: brightness(20);
+    filter: brightness(20);
+    }
+
+    .slide-menu-izq {
+        padding-top: 15px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        left: -300px;
+    }
+
+
+    .slide-menu-izq li {
+        display: block;
+        text-align: center;
+    }
+    
+    .slide-menu-izq a {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+    }  
+
+input[name="nav-button"][type="checkbox"] {display: none;}
+
+label[name="nav-button-lbl"] {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    background-image: url("http://i.imgur.com/p3UtDVA.png");
+    width: 20px;
+    height:20px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-button:checked ~ .slide-menu-izq {
+    left: 0px;
+
+}
+.nav-button:checked ~ label[name="nav-button-lbl"] {
+    left: 320px;
+    background-image: url("http://i.imgur.com/JYhNv9p.png");
+    transition: all 0.3s;   
+}
+
+@media only screen and (max-width: 450px) {
+    .miniabout { 
+    height: 300px;
+    transition: all 0.3s;
+}
+    .miniaboutcontent {
+    height: 265px;
+    transition: all 0.3s;
+}
+
+.nav-button:checked ~ label[name="cart-button-lbl"] {
+    right: -30px
+}
+
+.nav-button:checked ~ .cart {
+    right: -200px
+}
+
+}
+
+.brand {    
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 13px;
+    background-image: url("http://i.imgur.com/wrrfDwo.png");
+    width: 83px;
+    height: 30px;
+    background-size: 83px 30px;
+    background-repeat: no-repeat;
+}
+
+.cart {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    margin-left: auto;
+    background-color: black;
+    width: 200px;
+    height: 0px;
+    opacity: 0.0;
+    border-radius: 5px;
+}
+
+input[name="cart-button"][type="checkbox"] {display: none;}
+
+label[name="cart-button-lbl"] {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    margin-left: auto;
+    background-image: url("http://i.imgur.com/xF23ODt.png");
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cart-button:checked ~ .cart {
+    opacity: 0.8;
+    transition: all 0.3s;
+    height: 300px;
+}
+
+/*------------------------------------*\
+    $HOME
+\*------------------------------------*/
+
+.home {
+    top: 57px;
+    margin: 0 auto; 
+    z-index: -3;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("http://i.imgur.com/OvBfWT1.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+.slogan p {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+    padding: 0px 30px 0px;
+
+}
+
+.slogan {
+    padding-bottom: 30px;
+}
+
+.panels {
+    text-align: center;
+    top: 20px;
+    width:100%;
+    position: absolute;
+    
+}
+
+.proto {
+    display: inline-block;
+    position: relative;
+    margin: 0px 10px 0px 10px;
+    height: 550px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.bora {
+    display: inline-block;
+    position: relative;
+    margin: 0px 10px 40px 10px;
+     height: 450px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.cnc {
+    display: inline-block;
+    position: relative;
+    margin: 0px 10px 40px 10px;
+     height: 450px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: black;
+    opacity: 0.8;
+}
+
+
+
+/*------------------------------------*\
+    $GUIDELINES
+\*------------------------------------*/
+
+.guidelines { 
+
+    z-index: -2;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    display:block;
+}
+
+.guidelinecontent {
+    position: static;
+    margin:auto;
+    margin-top: -20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: -2;
+    width: 98%;
+    height: 465px;
+}
+
+h1 {
+    position: relative;
+    top: 5px;
+    margin-left: 30px;
+    text-align: center;
+    background-color: white;
+    width: 110px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+}
+
+/*------------------------------------*\
+    $PRODUTOS
+\*------------------------------------*/
+
+.produtos { 
+
+    z-index: -2;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    display:block;
+}
+
+.produtoscontent {
+    position: static;
+    margin:auto;
+    margin-top: -20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: -2;
+    width: 98%;
+    height: 465px;
+}
+
+h1 {
+    position: relative;
+    top: 5px;
+    margin-left: 30px;
+    text-align: center;
+    background-color: white;
+    width: 110px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+}
+
+/*------------------------------------*\
+    $MINIABOUT
+\*------------------------------------*/
+
+.miniabout { 
+    z-index: -2;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display:block;
+    animation: colorchange 20s linear infinite alternate; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 20s linear infinite alternate; /* Chrome and Safari */
+}
+
+.miniaboutcontent {
+    position: static;
+    margin:auto;
+    margin-top: -20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    z-index: -2;
+    width: 98%;
+    height: 165px;
+}
+
+#invtitle {
+    position: relative;
+    top: 5px;
+    margin-left: 30px;
+    text-align: center;
+    background-color: white;
+    width: 110px;
+    opacity: 0.0;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+}
+
+#texto {
+    padding-top: 2%;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+}
+
+@keyframes colorchange
+    {
+      0%   {background: #bf2b1c;}
+      25%  {background: #6e3687;}
+      50%  {background: #80ae38;}
+      75%  {background: #2066ab;}
+      100% {background: #d07faf;}
+    }
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+
+@media only screen and (max-width: 450px) {
+    .miniabout { 
+    height: 300px;
+    transition: all 0.3s;
+}
+    .miniaboutcontent {
+    height: 265px;
+    transition: all 0.3s;
+}
+}
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+.footer { 
+    z-index: -2;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: #ad323d;
+    display:block;
+}
+
+
+
+

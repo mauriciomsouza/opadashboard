@@ -1,0 +1,1 @@
+web: gunicorn sopro.wsgi --log-file -
