@@ -17,7 +17,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'raven.contrib.django.raven_compat',
 
-    'sopro',
+    'opa',
     'mano_id',
     'homesite',
 )
@@ -34,7 +34,7 @@ MIDDLEWARE_CLASSES = (
     'mano_id.middleware.ManoSessionMiddleware',
 )
 
-ROOT_URLCONF = 'sopro.urls'
+ROOT_URLCONF = 'opa.urls'
 
 TEMPLATES = (
     {
@@ -53,7 +53,7 @@ TEMPLATES = (
     },
 )
 
-WSGI_APPLICATION = 'sopro.wsgi.application'
+WSGI_APPLICATION = 'opa.wsgi.application'
 
 
 DATABASES = {

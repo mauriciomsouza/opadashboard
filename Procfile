@@ -1,1 +1,1 @@
-web: gunicorn sopro.wsgi --log-file -
+web: gunicorn opadashboard.wsgi --log-file -
