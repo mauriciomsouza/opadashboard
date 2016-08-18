@@ -149,6 +149,18 @@ input[type="checkbox"] {
     top: 374;
 }
 
+#lb-galery {
+    top: 416;
+}
+
+#lb-promotion {
+    top: 458;
+}
+
+#lb-notify {
+    top: 500;
+}
+
 .location:checked ~ #lb-location:before {
     background: #55dc55;
 }
@@ -158,6 +170,18 @@ input[type="checkbox"] {
 }
 
 .campaign:checked ~ #lb-campaign:before {
+    background: #55dc55;
+}
+
+.galery:checked ~ #lb-galery:before {
+    background: #55dc55;
+}
+
+.promotion:checked ~ #lb-promotion:before {
+    background: #55dc55;
+}
+
+.notify:checked ~ #lb-notify:before {
     background: #55dc55;
 }
 
@@ -178,6 +202,30 @@ input[type="checkbox"] {
 }
 
 .campaign:checked ~ .cardcampaign {
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.galery:checked ~ .cardgalery {
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.promotion:checked ~ .cardpromotion {
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.notify:checked ~ .cardnotify {
     background-color: #fff;
     width: 500px;
     height: 300px;
@@ -245,6 +293,80 @@ input[type="checkbox"] {
     transition: all 0.2s;
     overflow:hidden;
 }
+
+.cardgalery {
+    display: inline-flex;
+    float:left;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: 20px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.cardpromotion {
+    display: inline-flex;
+    float:left;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: 20px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.cardnotify {
+    display: inline-flex;
+    float:left;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: 20px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.logout {
+    position: absolute;
+    top: 600;
+    color: white;
+    left: 70;
+    width: 110;
+    text-align: center;
+    font-size: 11;
+    background-color: transparent;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.logout:hover {
+    color: #19334d;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.logout:active {
+    color: white;
+    background-color: #5180b0;
+    border: 1px solid white;
+    transition: all 0.1s;
+}
+
+.logout:focus {
+   outline: none;
+}
+
 
 .fixedcard {
     display: inline-flex;
