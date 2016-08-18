@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     font-family: "Questrial";
+    background-color: #19334d;
 }
 
 .topbar {
@@ -55,62 +56,201 @@ h1 {
     background-size: cover;
 }
 
-.sidemenu {
-    position: fixed;
-    float: left;
-    width: 250px;
-    height: 100%;
-    background-color: #19334d;
+.avatar {
+    position: absolute;
+    top: 100;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/avatar.png);
+    background-color: #ccc;
+    border-radius: 50%;
+    left: 75;
+    border: 5px solid white;
 }
 
+#name {
+    position: absolute;
+    top: 190;
+    color: white;
+    left: 0;
+    width: 250;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+#company {
+    position: absolute;
+    top: 225;
+    color: white;
+    left: 0;
+    width: 250;
+    text-align: center;
+    font-size: 0.9em;
+    background-color: #5180b0;
+    height: 25px;
+    padding-top: 10px;
+}
+
+
+
 .home {
+    padding-top: 75px;
+    margin-left: 260px;
     float: right;
     width: calc(100% - 250px);
-    height: 100%;
+    height: calc(100% - 75px);
     background-color: #ecf2f8;
 }
 
-.dock {
-    text-align: center;
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-family: "Questrial";
+  font-size: 16;
+  width: 220px;
+  height: 29px;
+  padding: 13 0 0 30;
+  border-bottom: 1px solid #13506f;
+}
+
+label:hover {
+  background-color: #0b6391;
+  cursor: pointer;
+}
+
+label:before {
+  position: absolute;
+  left: 210px;
+  top: 13px;
+  content: "";
+  background: #dc5555;
+  border-radius: 50%;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+}
+
+#lb-location {
+    top: 290;
+}
+
+#lb-product {
+    top: 332;
+}
+
+#lb-campaign {
+    top: 374;
+}
+
+.location:checked ~ #lb-location:before {
+    background: #55dc55;
+}
+
+.product:checked ~ #lb-product:before {
+    background: #55dc55;
+}
+
+.campaign:checked ~ #lb-campaign:before {
+    background: #55dc55;
+}
+
+.location:checked ~ .cardlocation {
+    margin-left: 15;
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.product:checked ~ .cardproduct {
+    margin-left: 15;
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.campaign:checked ~ .cardcampaign {
+    margin-left: 15;
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.cardtitle {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.4);
-    height: 110px;
-    width: 578px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    color: #fff;
+    top: 40;
+    left: -40;
+    font-size: 14;
+    padding: 0 0 0 0;
+    text-align: right;
+    width: 100;
+    transform: rotate(-90deg);
 }
 
-.dock button {
-    border: none;
-    margin: 10;
-    padding: 80 0 0 0;
-    height: 70px;
-    width: 70px;
-    background-size: contain;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    outline: none;
-    font-weight: bold;
+.ctopened {
+    font-size: 16;
+    height: 15;
+    margin-left: 20;
+    padding: 0;
 }
 
-#local {
-    background-image: url(../img/location.png);
+.cardlocation {
+    display: inline-flex;
+    float:left;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: 20px;
+    height: 300px;
+    opacity: 0.8;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
 }
-#campaigns {
-    background-image: url(../img/campaigns.png);
+
+.cardproduct {
+    display: inline-flex;
+    float:left;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: 20px;
+    height: 300px;
+    opacity: 0.8;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
 }
-#products {
-    background-image: url(../img/products.png);
+
+.cardcampaign {
+    display: inline-flex;
+    float:left;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: 20px;
+    height: 300px;
+    opacity: 0.8;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
 }
-#galery {
-    background-image: url(../img/galery.png);
-}
-#promote {
-    background-image: url(../img/promote.png);
-}
-#notifications {
-    background-image: url(../img/notification.png);
-}
+
+
+
