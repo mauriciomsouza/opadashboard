@@ -3,7 +3,7 @@
         <title>Opa! Dashboard</title>
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="scripts" href="static/js/script.js">
-        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <meta charset="UTF-8">
     </head>
     <body>
@@ -20,21 +20,97 @@
             </div>
             
             <h3 id="name">Romulo Matteoni</h3>
-            <h3 id="company">Padaria Já Pão</h3>
+            <h3 id="company">Padaria JáPão</h3>
             
             <input type="checkbox" id="location" name="location" class="location" />
-            <label for="location" name="location" id="lb-location">Local</label> 
+            <label for="location" name="location" id="lb-location" class="lb-menu">Estabelecimento</label> 
             
             <input type="checkbox" id="product" name="product" class="product" />
-            <label for="product" name="product" id="lb-product">Produtos</label>
+            <label for="product" name="product" id="lb-product" class="lb-menu">Produtos</label>
             
             <input type="checkbox" id="campaign" name="campaign" class="campaign" />
-            <label for="campaign" name="campaign" id="lb-campaign">Campanhas</label>
+            <label for="campaign" name="campaign" id="lb-campaign" class="lb-menu">Campanhas</label>
             
+             <input type="checkbox" id="galery" name="galery" class="galery" />
+            <label for="galery" name="galery" id="lb-galery" class="lb-menu">Galeria</label>
+            
+             <input type="checkbox" id="promotion" name="promotion" class="promotion" />
+            <label for="promotion" name="promotion" id="lb-promotion" class="lb-menu">Promoções</label>
+            
+             <input type="checkbox" id="notify" name="notify" class="notify" />
+            <label for="notify" name="notify" id="lb-notify" class="lb-menu">Notificações</label>
+            
+            <button id="logout" class="logout">Sair</button>
+            <button id="config" class="config">Configurações</button>
+            
+            <div class="fixedcard">
+            <h3 class="fixedtitle">Rankings</h3>
+            <input type="radio" id="button-1" name="controls" checked="checked" class="option-rank"/>
+            <label for="button-1" class="lb-rank"></label>
+            <input type="radio" id="button-2" name="controls" class="option-rank"/>
+            <label for="button-2" class="lb-rank"></label>
+            <input type="radio" id="button-3" name="controls" class="option-rank"/>
+            <label for="button-3" class="lb-rank"></label>
+            <input type="radio" id="button-4" name="controls" class="option-rank"/>
+            <label for="button-4" class="lb-rank"></label>
+            <input type="radio" id="button-5" name="controls" class="option-rank"/>
+            <label for="button-5" class="lb-rank"></label>
+            
+            <div class="rankcard" id="rank1">
+                <h3 class="insidetitle">Estabelecimentos</h3>
+                <div class="rankspot">
+                <div class="spotthumb"></div>
+                <label class="spotname">Peter Coyote Curso de Culinária</label>
+                <label class="spotaddress">Rua São João Batista, 251</label>
+                <label class="spotplace">1°</label>
+                </div>
+                <div class="rankspot2">
+                <div class="spotthumb2"></div>
+                <label class="spotname2">Peter Coyote Curso de Culinária</label>
+                <label class="spotaddress2">Rua São João Batista, 251</label>
+                <label class="spotplace2">2°</label>
+                </div>
+                <div class="rankspot2">
+                <div class="spotthumb2"></div>
+                <label class="spotname2">Peter Coyote Curso de Culinária</label>
+                <label class="spotaddress2">Rua São João Batista, 251</label>
+                <label class="spotplace2">3°</label>
+                </div>
+                <div class="rankspot2">
+                <div class="spotthumb2"></div>
+                <label class="spotname2">Peter Coyote Curso de Culinária</label>
+                <label class="spotaddress2">Rua São João Batista, 251</label>
+                <label class="spotplace2">4°</label>
+                </div>
+                <div class="rankspot2">
+                <div class="spotthumb2"></div>
+                <label class="spotname2">Peter Coyote Curso de Culinária</label>
+                <label class="spotaddress2">Rua São João Batista, 251</label>
+                <label class="spotplace2">5°</label>
+                </div>
+            </div>
+            <div class="rankcard" id="rank2">
+                <h3 class="insidetitle">Produtos: Categoria do Estabelecimento</h3>
+                </div>
+            <div class="rankcard" id="rank3">
+                <h3 class="insidetitle">Categorias de Interesse</h3>
+                </div>
+            <div class="rankcard" id="rank4">
+                <h3 class="insidetitle">Eficiência</h3>
+                </div>
+            <div class="rankcard" id="rank5">
+                <h3 class="insidetitle">Campanhas</h3>
+                </div>
+            </div>
+            
+            <div class="fixedcard2">
+            <h3 class="fixedtitle">Divulgação</h3>
+            <div class="cardcontent"></div>
+            </div>
             
             <div class="cardlocation">
-            <h3 class="cardtitle">Local</h3>
-            <h3 class="ctopened">Local</h3>
+            <h3 class="cardtitle">Estabelecimento</h3>
+            <h3 class="ctopened">Estabelecimento</h3>
             <div class="cardcontent"></div>
             </div>
             
@@ -47,6 +123,24 @@
             <div class="cardcampaign">
             <h3 class="cardtitle">Campanhas</h3>
             <h3 class="ctopened">Campanhas</h3>
+            <div class="cardcontent"></div>
+            </div>
+            
+              <div class="cardgalery">
+            <h3 class="cardtitle">Galeria</h3>
+            <h3 class="ctopened">Galeria</h3>
+            <div class="cardcontent"></div>
+            </div>
+            
+              <div class="cardpromotion">
+            <h3 class="cardtitle">Promoções</h3>
+            <h3 class="ctopened">Promoções</h3>
+            <div class="cardcontent"></div>
+            </div>
+            
+              <div class="cardnotify">
+            <h3 class="cardtitle">Notificações</h3>
+            <h3 class="ctopened">Notificações</h3>
             <div class="cardcontent"></div>
             </div>
             
