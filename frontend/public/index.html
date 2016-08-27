@@ -5,6 +5,7 @@
         <link rel="scripts" href="static/js/script.js">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <meta charset="UTF-8">
+        
     </head>
     <body>
         <nav class="topbar">
@@ -141,10 +142,93 @@
               <div class="cardnotify">
             <h3 class="cardtitle">Notificações</h3>
             <h3 class="ctopened">Notificações</h3>
-            <div class="cardcontent"></div>
+            <div class="cardcontent">
+            <div class="createpush">
+            <p class="labelpush">Escolha a área de sua notificação:</p>
+                <input type="radio" name="searchradius" value="200m" id="radius1" checked class="option-searchradius">
+                <label id="200m" class="lb-searchradius" for="radius1">200m</label>
+                <input type="radio" name="searchradius" value="500m" id="radius2" class="option-searchradius">
+                <label id="500m" class="lb-searchradius" for="radius2">500m</label>
+                <input type="radio" name="searchradius" value="1km" id="radius3" class="option-searchradius">
+                <label id="1km" class="lb-searchradius" for="radius3">1km</label>
+            
+            <p class="labelpush">Digite o texto da notificação:</p>
+            <textarea class="push" rows="4" cols="30" placeholder="Envie uma notificação e atraia mais clientes..." maxlength="110"></textarea>
+            <button id="sendpush" class="pushbuttons">Enviar</button>
+            <button id="cancelpush" class="pushbuttons">Limpar</button>
+            </div>
+            <div class="histpush">
+            <p>Últimas Notificações</p>
+            
+                <div class="pushnotify">
+                <div class="localimage">
+                  </div>
+                  <div class="appicon"></div>
+                  <p class="appname">Opa!</p>
+                  <p class="localname">Padaria JáPão</p>
+                  <p class="pushmessage">Está por perto? Que tal provar o novo cafézinho com pão francês?</p>
+                </div>
+                
+                <div class="pushnotify">
+                <div class="localimage">
+                  </div>
+                  <div class="appicon"></div>
+                  <p class="appname">Opa!</p>
+                  <p class="localname">Padaria JáPão</p>
+                  <p class="pushmessage">Está por perto? Que tal provar o novo cafézinho com pão francês?</p>
+                </div>
+                
+                <div class="pushnotify">
+                <div class="localimage">
+                  </div>
+                  <div class="appicon"></div>
+                  <p class="appname">Opa!</p>
+                  <p class="localname">Padaria JáPão</p>
+                  <p class="pushmessage">Está por perto? Que tal provar o novo cafézinho com pão francês?</p>
+                </div>
+                
+                <div class="pushnotify">
+                <div class="localimage">
+                  </div>
+                  <div class="appicon"></div>
+                  <p class="appname">Opa!</p>
+                  <p class="localname">Padaria JáPão</p>
+                  <p class="pushmessage">Está por perto? Que tal provar o novo cafézinho com pão francês?</p>
+                </div>
+                  
+                </div>
+            
+            <div class="viewpush">
+            <div class="carousel">						
+			<input type="radio" name="slides" id="radio-1" checked>
+			<input type="radio" name="slides" id="radio-2">
+			<input type="radio" name="slides" id="radio-3">
+			<ul class="slides">
+				<div class="slide">
+                <p class="numcount">37</p>
+                <p>Notificações Enviadas</p>
+                </div> 
+                <div class="slide">
+                <p class="numcount">158</p>
+                <p>Notificações Visualizadas</p>
+                </div>
+                <div class="slide">
+                <p class="numcount">49</p>
+                <p>Notificações Canceladas</p>
+                </div>
+			</ul>
+			<div class="slidesNavigation">
+				<label for="radio-1" id="dotForRadio-1"></label>
+				<label for="radio-2" id="dotForRadio-2"></label>
+				<label for="radio-3" id="dotForRadio-3"></label>
+			</div>
+</div>		
+            </div>
+            </div>
             </div>
             
         </section>
         
     </body>
+    
 </html>

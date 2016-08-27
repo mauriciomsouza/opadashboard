@@ -128,6 +128,7 @@ h1 {
 }
 
 .search:focus {
+    border: 2px solid;
     border-color: #008ECA;
     outline: none;
 }
@@ -316,6 +317,7 @@ input[type="checkbox"] {
     height: 300px;
     border-radius: 5px;
     transition: all 0.3s;
+    min-width: 1223px;
 }
 
 .cardtitle {
@@ -411,6 +413,7 @@ input[type="checkbox"] {
     border-radius: 5px;
     transition: all 0.2s;
     overflow:hidden;
+    
 }
 
 .config {
@@ -527,9 +530,9 @@ input[type="checkbox"] {
     background-color: #abc7ec;
     border-radius: 50%;
     margin: 6 3 0 3;
-    left: -65;
-    top: 295px;
-    z-index: 2;
+    left: 275;
+    top: 15px;
+    z-index: 1:
 }
 
 .option-rank:checked + .lb-rank:before {
@@ -585,4 +588,260 @@ input[type="checkbox"] {
     font-size: 14;
     padding: 5;
     margin: 0;
+}
+
+.cardcontent {
+    position: absolute;
+    left: 50%;
+    width: 1223px;
+    transform: translateX(-50%);
+}
+
+.createpush {
+  border-right: 1px solid #999;
+  position: relative;
+  float: left;
+  width: 430px;
+  height: 230px;
+  margin-left: 20px;
+}
+
+.viewpush {
+  float: left;
+  position: relative;
+  width: 330px;
+  height: 230px;
+  padding-left: 20px;    
+}
+
+.histpush {
+  float: left;
+  position: relative;
+  width: 400px;
+  height: 230px;
+  padding-left: 20px;
+    border-right: 1px solid #999;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.histpush::-webkit-scrollbar {
+    width:5px;
+    height:5px;
+}
+
+.histpush::-webkit-scrollbar-button:start:decrement,.histpush::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+.histpush::-webkit-scrollbar-track-piece{-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+.histpush::-webkit-scrollbar-thumb:vertical{height:20px;background-color:#008ECA;-webkit-border-radius:8px;}
+
+.labelpush {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.push {
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 16px;
+    width: 390px;
+    height: 60px;
+    resize: none;
+    border-radius: 10px;
+}
+
+.push:focus {
+    border: 2px solid;
+    border-color: #008ECA;
+    outline: none;
+}
+
+.pushbuttons {
+    position: relative;
+    top: 15px;
+    left: 70px;
+    border-radius: 50px;
+    background-color: #5180b0;
+    border: none;
+    color: #fff;
+    height: 30px;
+    width: 130px;
+}
+
+.pushbuttons:hover {
+    background-color: 
+}
+
+.option-searchradius {
+    display: none;
+}
+
+.lb-searchradius {
+    cursor: pointer;
+    margin: 0 40 0 40;
+    color: #888;
+    font-weight: lighter;
+}
+
+.lb-searchradius:before {
+    content:"";
+    width: 14px;
+    height: 14px;
+    background-color: #abc7ec;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 6 5 -2 3;
+    z-index: 1:
+}
+
+.option-searchradius:checked + .lb-searchradius:before {
+    width: 8px;
+    height: 8px;
+    background-color: #397dda;
+    border: 3px solid #abc7ec;
+}
+
+.pushnotify {
+    height: 90px;
+    width: 380px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.appname {
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    left: 36px;
+    top: -28px;
+    color: #397dda; 
+}
+
+.localname {
+    font-weight: bold;
+    position: relative;
+    top: -38px;
+    font-size: 15px;
+    left: 13px; 
+}
+
+.pushmessage {
+    font-size: 14px;
+    position: relative;
+    left: 13px;
+    top: -50px;
+    color: #999;
+    width: 320px;
+}
+
+.localimage {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    float: right;
+    right: 13px;
+    top: 30px;
+    border-radius: 50%;
+    background-color: grey;
+    background-image: url("../img/localimage.jpg");
+    background-size: contain;
+}
+
+.appicon {
+    background-image: url("../img/icon.png");
+    width: 22px;
+    height: 22px;
+    position: relative;
+    background-size: contain;
+    top: 5px;
+    left: 10px;
+}
+
+.carousel{
+  text-align: center;
+  height: 240px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  width: 300%;
+  height: 205px;
+  overflow: hidden;
+  list-style: none;
+  position: relative;
+  transition: left .75s ease-out;  
+}
+
+.slides div{
+  width: 33%;
+  height: 100%;
+  position: relative;
+  float: left;
+  left: -39px;
+}
+
+.slides div p{
+  position: relative;
+  top: -125px;
+  font-size: 20px;
+  color: #999;
+}
+
+.slides div .numcount{
+  position: relative;
+  top: -60px;
+  font-weight: bold;
+  font-size: 80px;
+  color: dodgerblue;
+}
+
+
+
+.carousel .slidesNavigation{
+  display: block;
+  list-style: none;
+  text-align: center;
+  bottom: 1em;
+  position: absolute;  
+  width: 104px;
+  left: 50%;
+  margin-left: -42px;
+}
+.carousel input{
+  display: none;
+}
+.carousel .slidesNavigation label{
+  float: left;
+  margin: 6px;
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #abc7ec;
+  font-size: 0;
+}
+
+#radio-1:checked ~ .slides{
+  left: 0;
+}
+#radio-2:checked ~ .slides{
+  left: -100%;
+}
+#radio-3:checked ~ .slides{
+  left: -200%;
+}
+
+
+.carousel .slidesNavigation label:hover{
+   cursor: pointer;
+}
+/* You have to repeat this with each slide/dot */
+.carousel #radio-1:checked ~ .slidesNavigation label#dotForRadio-1,
+.carousel #radio-2:checked ~ .slidesNavigation label#dotForRadio-2,
+.carousel #radio-3:checked ~ .slidesNavigation label#dotForRadio-3,
+.carousel #radio-4:checked ~ .slidesNavigation label#dotForRadio-4{
+  background-color: #397dda;
 }
