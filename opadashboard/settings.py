@@ -17,8 +17,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'raven.contrib.django.raven_compat',
 
-    'opa',
-    'mano_id',
+    'opadashboard',
     'homesite',
 )
 
@@ -31,10 +30,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'mano_id.middleware.ManoSessionMiddleware',
 )
 
-ROOT_URLCONF = 'opa.urls'
+ROOT_URLCONF = 'opadashboard.urls'
 
 TEMPLATES = (
     {
@@ -53,7 +51,7 @@ TEMPLATES = (
     },
 )
 
-WSGI_APPLICATION = 'opa.wsgi.application'
+WSGI_APPLICATION = 'opadashboard.wsgi.application'
 
 
 DATABASES = {
@@ -101,11 +99,6 @@ STATICFILES_DIRS = [
     BASE_DIR.child('static'),
 ]
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-AUTH_USER_MODEL = 'mano_id.User'
-
-MANO_APPLICATION_NAME = config('MANO_APPLICATION_NAME')
-MANO_URL = config('MANO_URL')
 
 LOGIN_URL = '/login/'
 
