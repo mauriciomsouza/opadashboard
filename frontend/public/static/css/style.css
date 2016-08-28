@@ -744,7 +744,6 @@ input[type="checkbox"] {
     top: 30px;
     border-radius: 50%;
     background-color: grey;
-    background-image: url("../img/localimage.jpg");
     background-size: contain;
 }
 
