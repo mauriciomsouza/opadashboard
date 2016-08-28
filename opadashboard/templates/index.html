@@ -5,9 +5,11 @@
         <script src="static/js/script.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-2 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-3 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-4 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+        <script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(-22.9561559,-43.19218219999999),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-22.9561559,-43.19218219999999)});infowindow = new google.maps.InfoWindow({content:'<strong>Padaria JáPão</strong><br>Rua Real Grandeza, 183<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
         <meta charset="UTF-8">
         
     </head>
@@ -120,7 +122,47 @@
             <div class="cardlocation">
             <h3 class="cardtitle">Estabelecimento</h3>
             <h3 class="ctopened">Estabelecimento</h3>
-            <div class="cardcontent"></div>
+            <div class="cardcontent">
+            <div class="localprofile">
+            <div class="imageupload">
+            </div>
+            <p class="namelocal">Padaria JáPão</p>
+                <p class="address">Rua Real Grandeza, 183<br>Botafogo - Rio de Janeiro
+                </p>
+            <textarea class="describe" rows="6" cols="30" placeholder="Atualize sua descrição..." maxlength="300"></textarea>
+            <button class="save">Salvar</button>
+            </div>
+            <div class="viewstats">
+            <div class="carouselstats">						
+			<input type="radio" name="slidesstats" id="stats-1" checked>
+			<input type="radio" name="slidesstats" id="stats-2">
+			<input type="radio" name="slidesstats" id="stats-3">
+			<ul class="slidesstats">
+				<div class="slidestats">
+                <p class="numcount">37</p>
+                <p>Número de Leituras</p>
+                </div> 
+                <div class="slidestats">
+                <p class="numcount">158</p>
+                <p>Número de Favoritos</p>
+                </div>
+                <div class="slidestats">
+                <p class="numcount">49</p>
+                <p>Número de Iria de Novo</p>
+                </div>
+			</ul>
+			<div class="slidesNavigationstats">
+				<label for="stats-1" id="dotForstats-1"></label>
+				<label for="stats-2" id="dotForstats-2"></label>
+				<label for="stats-3" id="dotForstats-3"></label>
+			</div>
+            </div>		
+            </div>
+            <div class="aroundme">
+            <p>Usuários ao meu redor</p>
+                <div style='overflow:hidden;height:180px;width:350px;'><div id='gmap_canvas' style='height:180px;width:350px;'></div><div></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+            </div>
+            </div>
             </div>
             
             <div class="cardproduct">
