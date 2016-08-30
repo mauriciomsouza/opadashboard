@@ -1,0 +1,857 @@
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #19334d;
+    min-width: 1500px;
+}
+
+.rankspot {
+    position: relative;
+    height: 60px;
+    width: 420px;
+    border-bottom: 1px solid #ccc;
+}
+
+.spotthumb {
+    float:left;
+    position: relative;
+    background-color: #ddd;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5;
+}
+
+.spotname {
+    font-weight: bold;
+    position: relative;
+    font-size: 18;
+    top: 10px;
+    left: 10px;
+}
+
+.spotplace {
+    color: dodgerblue;
+    font-size: 48;
+    font-weight: bold;
+    position: relative;
+    float: right;
+    top: -40;
+}
+
+.spotaddress {
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.rankspot2 {
+    position: relative;
+    height: 40px;
+    width: 420px;
+    border-bottom: 1px solid #ccc;
+}
+
+.spotthumb2 {
+    float:left;
+    position: relative;
+    background-color: #ddd;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5 5 5 15;
+}
+
+.spotname2 {
+    position: relative;
+    font-size: 14;
+    top: 5px;
+    left: 10px;
+    color: #777;
+}
+
+.spotplace2 {
+    color: #999;
+    font-size: 30;
+    font-weight: bold;
+    position: absolute;
+    float: right;
+    top: 0;
+    left: 380;
+}
+
+.spotaddress2 {
+    font-size: 12;
+    display: block;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    color: #aaa;
+}
+
+.topbar {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+    background-image: url("../img/logo.png");
+    background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    margin-top: 18px;
+    height: 40px;
+    width: 250px;
+    z-index: 2;
+}
+
+h1 {
+    padding-top: 10px;
+    font-size: 1.2em;
+    left: 270px;
+    position: absolute;
+}
+
+.search {
+    float: right;
+    border-radius: 20px;
+    border: 1px solid #999;
+    padding: 5 0 5 10;
+    margin: 20 20 0 0;
+}
+
+.search:focus {
+    border: 2px solid;
+    border-color: #008ECA;
+    outline: none;
+}
+
+.search::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    margin-right: 8px;
+    height: 13px;
+    width: 13px;
+    border-radius:10px;
+    background-image: url(../img/close.png);
+    background-size: cover;
+}
+
+.avatar {
+    position: absolute;
+    top: 100;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/avatar.png);
+    background-color: #ccc;
+    border-radius: 50%;
+    left: 80;
+    border: 5px solid white;
+}
+
+#name {
+    position: absolute;
+    top: 190;
+    color: white;
+    left: 0;
+    width: 250;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+#company {
+    position: absolute;
+    top: 225;
+    color: white;
+    left: 0;
+    width: 250;
+    text-align: center;
+    font-size: 0.9em;
+    background-color: #5180b0;
+    height: 25px;
+    padding-top: 10px;
+}
+
+
+
+.home {
+    padding-top: 75px;
+    margin-left: 260px;
+    float: right;
+    width: calc(100% - 250px);
+    min-height: 100%;
+
+    background-color: #ecf2f8;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.lb-menu {
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-size: 16;
+  width: 220px;
+  height: 29px;
+  padding: 13 0 0 30;
+  border-bottom: 1px solid #13506f;
+}
+
+.lb-menu:hover {
+  background-color: #0b6391;
+  cursor: pointer;
+}
+
+.lb-menu:before {
+  position: absolute;
+  left: 210px;
+  top: 13px;
+  content: "";
+  background: #dc5555;
+  border-radius: 50%;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+}
+
+#lb-location {
+    top: 290;
+}
+
+#lb-product {
+    top: 332;
+}
+
+#lb-campaign {
+    top: 374;
+}
+
+#lb-galery {
+    top: 416;
+}
+
+#lb-promotion {
+    top: 458;
+}
+
+#lb-notify {
+    top: 500;
+}
+
+.location:checked ~ #lb-location:before {
+    background: #55dc55;
+}
+
+.product:checked ~ #lb-product:before {
+    background: #55dc55;
+}
+
+.campaign:checked ~ #lb-campaign:before {
+    background: #55dc55;
+}
+
+.galery:checked ~ #lb-galery:before {
+    background: #55dc55;
+}
+
+.promotion:checked ~ #lb-promotion:before {
+    background: #55dc55;
+}
+
+.notify:checked ~ #lb-notify:before {
+    background: #55dc55;
+}
+
+.location:checked ~ .cardlocation {
+    background-color: #fff;
+    width: calc(100% - 15px);;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.product:checked ~ .cardproduct {
+    background-color: #fff;
+    width: calc(100% - 15px);;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.campaign:checked ~ .cardcampaign {
+    background-color: #fff;
+    width: calc(100% - 15px);;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.galery:checked ~ .cardgalery {
+    background-color: #fff;
+    width: calc(100% - 15px);;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.promotion:checked ~ .cardpromotion {
+   background-color: #fff;
+    width: calc(100% - 15px);;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.notify:checked ~ .cardnotify {
+   background-color: #fff;
+    width: calc(100% - 15px);;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    min-width: 1223px;
+}
+
+.cardtitle {
+    position: absolute;
+    color: #fff;
+    font-size: 14;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin: 2 0 0 0;
+}
+
+.ctopened {
+    font-size: 16;
+    height: 15;
+    margin-left: 20;
+    padding: 0;
+}
+
+.cardlocation {
+    display: block;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: calc(100% - 15px);;
+    height: 20px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.cardproduct {
+    display: block;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: calc(100% - 15px);;
+    height: 20px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.cardcampaign {
+    display: block;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: calc(100% - 15px);;
+    height: 20px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.cardgalery {
+    display: block;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: calc(100% - 15px);;
+    height: 20px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.cardpromotion {
+    display: block;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: calc(100% - 15px);;
+    height: 20px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.cardnotify {
+    display: block;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    background-color: #19334d;
+    width: calc(100% - 15px);;
+    height: 20px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+    
+}
+
+.config {
+    position: absolute;
+    top: 565;
+    color: white;
+    left: 70;
+    width: 110;
+    text-align: center;
+    font-size: 11;
+    background-color: transparent;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.config:hover {
+    color: #19334d;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.config:active {
+    color: white;
+    background-color: #5180b0;
+    border: 1px solid white;
+    transition: all 0.1s;
+}
+
+.config:focus {
+   outline: none;
+}
+
+.logout {
+    position: absolute;
+    top: 600;
+    color: white;
+    left: 70;
+    width: 110;
+    text-align: center;
+    font-size: 11;
+    background-color: transparent;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.logout:hover {
+    color: #19334d;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.logout:active {
+    color: white;
+    background-color: #5180b0;
+    border: 1px solid white;
+    transition: all 0.1s;
+}
+
+.logout:focus {
+   outline: none;
+}
+
+.fixedcard {
+    display: inline-flex;
+    float:left;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    margin-bottom: 10;
+    background-color: #fff;
+    width: 460px;
+    min-width: 350px;
+    height: 320px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.fixedcard2 {
+    display: inline-flex;
+    float:left;
+    position: relative;
+    margin-left: 10;
+    margin-top: 10;
+    margin-bottom: 10;
+    background-color: #fff;
+    width: calc(100% - 490px);
+    min-width: 750px;
+    height: 320px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    overflow:hidden;
+}
+
+.fixedtitle {
+    font-size: 16;
+    height: 15;
+    margin-left: 20;
+    padding: 0;
+}
+
+.fixedsub {
+    position: absolute;
+    font-size: 16;
+    height: 15;
+    right: 25;
+    padding: 0;
+    font-weight: lighter;
+}
+
+.lb-rank {
+    cursor: pointer;
+}
+
+.lb-rank:before {
+    content:"";
+    width: 10px;
+    height: 10px;
+    position: relative;
+    display: inline-block;
+    background-color: #abc7ec;
+    border-radius: 50%;
+    margin: 6 3 0 3;
+    left: 275;
+    top: 15px;
+    z-index: 1:
+}
+
+.option-rank:checked + .lb-rank:before {
+    background-color: #397dda;
+}
+
+#button-1:checked ~ #rank1 {
+    visibility: visible;
+}
+#button-2:checked ~ #rank2 {
+    visibility: visible;
+}
+#button-3:checked ~ #rank3 {
+    visibility: visible;
+}
+#button-4:checked ~ #rank4 {
+    visibility: visible;
+}
+#button-5:checked ~ #rank5 {
+    visibility: visible;
+}
+
+.option-rank {
+    display: none;
+}
+
+.rankcard {
+    position: absolute;
+    top: 40;
+    left: 20;
+    width: 460px;
+    visibility: hidden;
+}
+
+#rank1 {
+}
+
+#rank2 {
+}
+
+#rank3 {
+}
+
+#rank4 {
+}
+
+#rank5 {
+}
+
+.insidetitle {
+    position: relative;
+    font-weight: lighter;
+    font-size: 14;
+    padding: 5;
+    margin: 0;
+}
+
+.cardcontent {
+    position: absolute;
+    left: 50%;
+    width: 1223px;
+    transform: translateX(-50%);
+}
+
+.createpush {
+  border-right: 1px solid #999;
+  position: relative;
+  float: left;
+  width: 430px;
+  height: 230px;
+  margin-left: 20px;
+}
+
+.viewpush {
+  float: left;
+  position: relative;
+  width: 330px;
+  height: 230px;
+  padding-left: 20px;    
+}
+
+.histpush {
+  float: left;
+  position: relative;
+  width: 400px;
+  height: 230px;
+  padding-left: 20px;
+    border-right: 1px solid #999;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.histpush::-webkit-scrollbar {
+    width:5px;
+    height:5px;
+}
+
+.histpush::-webkit-scrollbar-button:start:decrement,.histpush::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+.histpush::-webkit-scrollbar-track-piece{-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+.histpush::-webkit-scrollbar-thumb:vertical{height:20px;background-color:#008ECA;-webkit-border-radius:8px;}
+
+.labelpush {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.push {
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 16px;
+    width: 390px;
+    height: 60px;
+    resize: none;
+    border-radius: 10px;
+}
+
+.push:focus {
+    border: 2px solid;
+    border-color: #008ECA;
+    outline: none;
+}
+
+.pushbuttons {
+    position: relative;
+    top: 15px;
+    left: 70px;
+    border-radius: 50px;
+    background-color: #5180b0;
+    border: none;
+    color: #fff;
+    height: 30px;
+    width: 130px;
+}
+
+.pushbuttons:hover {
+    background-color: 
+}
+
+.option-searchradius {
+    display: none;
+}
+
+.lb-searchradius {
+    cursor: pointer;
+    margin: 0 40 0 40;
+    color: #888;
+    font-weight: lighter;
+}
+
+.lb-searchradius:before {
+    content:"";
+    width: 14px;
+    height: 14px;
+    background-color: #abc7ec;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 6 5 -2 3;
+    z-index: 1:
+}
+
+.option-searchradius:checked + .lb-searchradius:before {
+    width: 8px;
+    height: 8px;
+    background-color: #397dda;
+    border: 3px solid #abc7ec;
+}
+
+.pushnotify {
+    height: 90px;
+    width: 380px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.appname {
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    left: 36px;
+    top: -28px;
+    color: #397dda; 
+}
+
+.localname {
+    font-weight: bold;
+    position: relative;
+    top: -38px;
+    font-size: 15px;
+    left: 13px; 
+}
+
+.pushmessage {
+    font-size: 14px;
+    position: relative;
+    left: 13px;
+    top: -50px;
+    color: #999;
+    width: 320px;
+}
+
+.localimage {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    float: right;
+    right: 13px;
+    top: 30px;
+    border-radius: 50%;
+    background-image: url("../img/localimage.png");
+    background-size: contain;
+}
+
+.appicon {
+    background-image: url("../img/icon.png");
+    width: 22px;
+    height: 22px;
+    position: relative;
+    background-size: contain;
+    top: 5px;
+    left: 10px;
+}
+
+.carousel{
+  text-align: center;
+  height: 240px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  width: 300%;
+  height: 205px;
+  overflow: hidden;
+  list-style: none;
+  position: relative;
+  transition: left .75s ease-out;  
+}
+
+.slides div{
+  width: 33%;
+  height: 100%;
+  position: relative;
+  float: left;
+  left: -39px;
+}
+
+.slides div p{
+  position: relative;
+  top: -125px;
+  font-size: 20px;
+  color: #999;
+}
+
+.slides div .numcount{
+  position: relative;
+  top: -60px;
+  font-weight: bold;
+  font-size: 80px;
+  color: dodgerblue;
+}
+
+
+
+.carousel .slidesNavigation{
+  display: block;
+  list-style: none;
+  text-align: center;
+  bottom: 1em;
+  position: absolute;  
+  width: 104px;
+  left: 50%;
+  margin-left: -42px;
+}
+.carousel input{
+  display: none;
+}
+.carousel .slidesNavigation label{
+  float: left;
+  margin: 6px;
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #abc7ec;
+  font-size: 0;
+}
+
+#radio-1:checked ~ .slides{
+  left: 0;
+}
+#radio-2:checked ~ .slides{
+  left: -100%;
+}
+#radio-3:checked ~ .slides{
+  left: -200%;
+}
+
+
+.carousel .slidesNavigation label:hover{
+   cursor: pointer;
+}
+/* You have to repeat this with each slide/dot */
+.carousel #radio-1:checked ~ .slidesNavigation label#dotForRadio-1,
+.carousel #radio-2:checked ~ .slidesNavigation label#dotForRadio-2,
+.carousel #radio-3:checked ~ .slidesNavigation label#dotForRadio-3,
+.carousel #radio-4:checked ~ .slidesNavigation label#dotForRadio-4{
+  background-color: #397dda;
+}

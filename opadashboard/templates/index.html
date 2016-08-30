@@ -2,9 +2,14 @@
     <head>
         <title>Opa! Dashboard</title>
         <link rel="stylesheet" href="static/css/style.css">
-        <link rel="scripts" href="static/js/script.js">
+        <script src="static/js/script.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+2 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+3 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+4 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
         <meta charset="UTF-8">
+        
     </head>
     <body>
         <nav class="topbar">
@@ -105,7 +110,11 @@
             
             <div class="fixedcard2">
             <h3 class="fixedtitle">Divulgação</h3>
-            <div class="cardcontent"></div>
+            <h4 class="fixedsub">Usuários Alcançados</h3>
+                <div class="cardcontent">
+                <div id="myfirstchart" style="height: 280px; width: 700px; top: 40px; left: 270px;"></div>
+                
+                </div>
             </div>
             
             <div class="cardlocation">
@@ -141,10 +150,116 @@
               <div class="cardnotify">
             <h3 class="cardtitle">Notificações</h3>
             <h3 class="ctopened">Notificações</h3>
-            <div class="cardcontent"></div>
+            <div class="cardcontent">
+            <div class="createpush">
+            <p class="labelpush">Escolha a área de sua notificação:</p>
+                <input type="radio" name="searchradius" value="200m" id="radius1" checked class="option-searchradius">
+                <label id="200m" class="lb-searchradius" for="radius1">200m</label>
+                <input type="radio" name="searchradius" value="500m" id="radius2" class="option-searchradius">
+                <label id="500m" class="lb-searchradius" for="radius2">500m</label>
+                <input type="radio" name="searchradius" value="1km" id="radius3" class="option-searchradius">
+                <label id="1km" class="lb-searchradius" for="radius3">1km</label>
+            
+            <p class="labelpush">Digite o texto da notificação:</p>
+            <textarea class="push" rows="4" cols="30" placeholder="Envie uma notificação e atraia mais clientes..." maxlength="110"></textarea>
+            <button id="sendpush" class="pushbuttons">Enviar</button>
+            <button id="cancelpush" class="pushbuttons">Limpar</button>
+            </div>
+            <div class="histpush">
+            <p>Últimas Notificações</p>
+            
+                <div class="pushnotify">
+                <div class="localimage">
+                  </div>
+                  <div class="appicon"></div>
+                  <p class="appname">Opa!</p>
+                  <p class="localname">Padaria JáPão</p>
+                  <p class="pushmessage">Está por perto? Que tal provar o novo cafézinho com pão francês?</p>
+                </div>
+                
+                <div class="pushnotify">
+                <div class="localimage">
+                  </div>
+                  <div class="appicon"></div>
+                  <p class="appname">Opa!</p>
+                  <p class="localname">Padaria JáPão</p>
+                  <p class="pushmessage">Está por perto? Que tal provar o novo cafézinho com pão francês?</p>
+                </div>
+                
+                <div class="pushnotify">
+                <div class="localimage">
+                  </div>
+                  <div class="appicon"></div>
+                  <p class="appname">Opa!</p>
+                  <p class="localname">Padaria JáPão</p>
+                  <p class="pushmessage">Está por perto? Que tal provar o novo cafézinho com pão francês?</p>
+                </div>
+                
+                <div class="pushnotify">
+                <div class="localimage">
+                  </div>
+                  <div class="appicon"></div>
+                  <p class="appname">Opa!</p>
+                  <p class="localname">Padaria JáPão</p>
+                  <p class="pushmessage">Está por perto? Que tal provar o novo cafézinho com pão francês?</p>
+                </div>
+                  
+                </div>
+            
+            <div class="viewpush">
+            <div class="carousel">						
+			<input type="radio" name="slides" id="radio-1" checked>
+			<input type="radio" name="slides" id="radio-2">
+			<input type="radio" name="slides" id="radio-3">
+			<ul class="slides">
+				<div class="slide">
+                <p class="numcount">37</p>
+                <p>Notificações Enviadas</p>
+                </div> 
+                <div class="slide">
+                <p class="numcount">158</p>
+                <p>Notificações Visualizadas</p>
+                </div>
+                <div class="slide">
+                <p class="numcount">49</p>
+                <p>Notificações Canceladas</p>
+                </div>
+			</ul>
+			<div class="slidesNavigation">
+				<label for="radio-1" id="dotForRadio-1"></label>
+				<label for="radio-2" id="dotForRadio-2"></label>
+				<label for="radio-3" id="dotForRadio-3"></label>
+			</div>
+</div>		
+            </div>
+            </div>
             </div>
             
         </section>
         
     </body>
+    <script>
+    new Morris.Line({
+  // ID of the element in which to draw the chart.
+  element: 'myfirstchart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+  data: [
+    { month: '2016-01', value: 30 },
+    { month: '2016-02', value: 48 },
+    { month: '2016-03', value: 90 },
+    { month: '2016-04', value: 129 },
+    { month: '2016-05', value: 218 },
+    { month: '2016-06', value: 218 }
+  ],
+  // The name of the data record attribute that contains x-values.
+  xkey: 'month',
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['value'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  xLabels: ['month'],
+  labels: ['Usuários']
+});
+    </script>
 </html>

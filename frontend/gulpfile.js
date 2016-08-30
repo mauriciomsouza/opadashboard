@@ -22,39 +22,39 @@ gulp.task('serve', [], function() {
 
 gulp.task('html', function() {
     return gulp.src('./public/index.html')
-        .pipe(gulp.dest('../opa/templates/'))
-        .pipe(gulp.dest('./dist/'))
-        .pipe(browserSync.stream());
+    .pipe(gulp.dest('../opadashboard/templates/'))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browserSync.stream());
 
 });
 
 gulp.task('scripts', function() {
     return gulp.src('./public/static/js/*.js')
-        .pipe(gulp.dest('../homesite/static/js'))
-        .pipe(gulp.dest('./dist/static/js'))
-        .pipe(browserSync.stream());
+    .pipe(gulp.dest('../homesite/static/js'))
+    .pipe(gulp.dest('./dist/static/js'))
+    .pipe(browserSync.stream());
 
 });
 
 gulp.task('styles', function() {
     return gulp.src('./public/static/css/*.css')
-        .pipe(gulp.dest('../homesite/static/css'))
-        .pipe(gulp.dest('./dist/static/css'))
-        .pipe(browserSync.stream());
+    .pipe(gulp.dest('../homesite/static/css'))
+    .pipe(gulp.dest('./dist/static/css'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('images', function() {
     return gulp.src('./public/static/img/*.png')
-        .pipe(gulp.dest('../homesite/static/img'))
-        .pipe(gulp.dest('./dist/static/img'))
-        .pipe(browserSync.stream());
+    .pipe(gulp.dest('../homesite/static/img'))
+    .pipe(gulp.dest('./dist/static/img'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('videos', function() {
     return gulp.src('./public/static/vid/*.mp4')
-        .pipe(gulp.dest('../homesite/static/vid'))
-        .pipe(gulp.dest('./dist/static/vid'))
-        .pipe(browserSync.stream());
+    .pipe(gulp.dest('../homesite/static/vid'))
+    .pipe(gulp.dest('./dist/static/vid'))
+    .pipe(browserSync.stream());
 });
 
 
