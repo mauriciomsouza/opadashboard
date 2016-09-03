@@ -660,7 +660,7 @@ input[type="checkbox"] {
     font-family: 'Roboto', sans-serif;
     margin-left: 16px;
     width: 200px;
-    height:120px;
+    height:90px;
     resize: none;
     border-radius: 10px;
     left: 180px;
@@ -673,6 +673,27 @@ input[type="checkbox"] {
     border-color: #008ECA;
     outline: none;
 }
+
+.phone {
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 16px;
+    margin-bottom: 5px;
+    width: 200px;
+    height:30px;
+    resize: none;
+    border-radius: 10px;
+    left: 180px;
+    top: -40px;
+    position: relative;
+}
+
+.phone:focus {
+    border: 2px solid;
+    border-color: #008ECA;
+    outline: none;
+}
+
 .localprofile {
   border-right: 1px solid #999;
   position: relative;
